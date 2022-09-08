@@ -1,4 +1,7 @@
+# Purpose of Project: To make a descriptive analysis about the survival rate of the passengers of Titanic
+
 # PART 1 : PRE-ANALYSIS
+
 # To find duplicate rows from passengers table
 
 SELECT 
@@ -12,7 +15,6 @@ GROUP BY
  Fare, Cabin, Embarked
 HAVING COUNT(*) > 1
 
-
 # To find the number of NULL Values and Non-NULL Values from age column
 
 SELECT 
@@ -20,7 +22,6 @@ SELECT
   CASE WHEN Age is NULL THEN 1 ELSE 0 END) AS "Age Null Values",
  COUNT(Age) AS "Age Non-Null Values" 
 FROM passengers
-
 
 # To find the number of NULL Values and Non-NULL Values from Cabin column
 
